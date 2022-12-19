@@ -3,42 +3,11 @@ $(function () {
   naviOpen();
   pageScroll();
   tabControl();
+  toggleOpenSwitch();
 
-  // スクロール関連処理
-  //------------------------------------------------//
-
-  // Sticky
-  $(".c-concept-contents").each(function () {
-    var trigger = $(this).find(".js-trigger-sticky");
-    var target = $(this).find(".sticky-image-02");
-
-    ScrollTrigger.create({
-      trigger: trigger,
-      start: "center 25%",
-      end: "center 25%",
-      //      markers: true,
-      onEnter: function () {
-        $(target).addClass("is-active");
-      },
-      onEnterBack: function () {
-        $(target).removeClass("is-active");
-      },
-    });
-  });
 });
 
-// [SP]HamburgerMenu
-//------------------------------------------------//
-function naviOpen() {
-  $(".js-spnav-button").click(function () {
-    $(".js-spnav-button").toggleClass("is-on");
-    if ($(".js-spnav-button").hasClass("is-on")) {
-      $(".js-contents-header, .js-spnav").addClass("is-show");
-    } else {
-      $(".js-contents-header, .js-spnav").removeClass("is-show");
-    }
-  });
-}
+
 
 // Smooth scroll
 //------------------------------------------------//
@@ -94,7 +63,6 @@ function naviOpen() {
       $(".js-contents-header, .js-spnav, .p-header-btn").removeClass("is-show");
     }
   });
-  // 繝｡繝九Η繝ｼ螟悶け繝ｪ繝�け
   $(document).on("click", function (event) {
     if (!$(event.target).closest(".c-navi,.js-spnav-button").length) {
       $(".js-spnav-button").removeClass("is-on");
@@ -111,7 +79,7 @@ function naviOpen() {
     }
   });
 
-  //スマホメニュー　スクロール制御
+  //スマホメニュー スクロール制御
   var state = false;
   var scrollpos;
   $(".p-header-btn").on("click", function () {
@@ -127,22 +95,45 @@ function naviOpen() {
     }
   });
 }
+// SP採用ページ
+//------------------------------------------------//
+function toggleOpenSwitch(){
+	var toggleBtn = ".js_toggle_btn";
+	var toggleArea = ".js_toggle_area";
+	var toggleCon = ".js_toggle_con";
+	$(toggleBtn).on("click",function(){
+		$(this).parents(toggleArea).find(toggleCon).slideToggle();
+		$(this).toggleClass("open");
+	});
+}
 
-$(".c-qa-list dd").hide();
-$(".c-qa-list").on("click", function(e){
-    $('dd',this).slideToggle('fast');
-    if($(this).hasClass('open')){
-        $(this).removeClass('open');
-    }else{
-        $(this).addClass('open');
-    }
+// inview animation
+//------------------------------------------------//
+$(function () {
+  $('.fadetxt').each(function () {
+    $(this).children().addBack().contents().each(function () {
+      if (this.nodeType == 3) {
+        $(this).replaceWith($(this).text().replace(/(\S)/g, '<span>$1</span>'));
+      }
+    });
+    $(this).on('inview', function () {
+      $(this).css({ 'opacity': 1 });
+      for (var i = 0; i <= $(this).children('span').length; i++) {
+        $(this).children('span').eq(i).delay(100 * i).animate({ 'opacity': 1 }, 1500);
+      }
+    });
+  });
+  $('.fade_list').on('inview', function () {
+    $('.fade_list li').each(function (i) {
+      $(this).delay((200 * i) + 500).queue(function () { $(this).addClass('show') });
+    });
+  });
+  $('.fade,.fade-up').on('inview', function () {
+    $(this).delay(800).queue(function () { $(this).addClass('show') });
+  });
+  $('.fade-up-top,.fade-up-top2,.fade-up-top3,.fade-up-top4,.fade-up-top5').on('inview', function () {
+    $(this).addClass('show');
+  });
 });
 
-// headerをスクロールすると、色が変わる
-jQuery(window).on('scroll', function () {
-  if (jQuery('h2').height() < jQuery(this).scrollTop()) {
-      jQuery('.js-nav').addClass('change-color');
-  } else {
-      jQuery('.js-nav').removeClass('change-color');
-  }
-});
+

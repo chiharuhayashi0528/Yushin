@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width">
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="広告宣伝物のモノづくりの経験をいかし、ゼロからの創造も可能に【雄進印刷】" />
@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="css/slick.css" type="text/css" media="all" />
   <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
   <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-  <script type="text/javascript" src="js/jquery.inview.js"></script>
+  <script type="text/javascript" src="js/jquery.inview.min.js"></script>
   <script type="text/javascript" src="js/slick.min.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
 </head>
@@ -30,20 +30,13 @@
   <header id="p-header" class="js-contents-header">
     <div class="header_wrap">
       <div class="header-area">
-        <div class="header-logo">
-          <a href="./">
-            <img src="images/common/logo.jpg" alt="雄進印刷" />
-          </a>
-        </div>
+        <div class="header-logo"> <a href="./"> <img src="images/common/logo.jpg" alt="雄進印刷" /> </a> </div>
         <div class="js-spnav-button pc_hide">
           <div class="c-menu">
-            <div class="p-header-btn js-navTrigger">
-              <span class="sp-nav-switch"></span>
-            </div>
+            <div class="p-header-btn js-navTrigger"> <span class="sp-nav-switch"></span> </div>
           </div>
         </div>
       </div>
-
       <nav id="p-navi" class="js-spnav">
         <div class="c-navi c-scroll">
           <ul class="c-navi-list pc_hide">
@@ -57,7 +50,6 @@
           </ul>
         </div>
       </nav>
-
       <nav class="pc-first-navi sp_hide js-nav">
         <ul class="pc-first-navi-menu">
           <li class="current"><a href="">TOP</a></li>
@@ -71,165 +63,156 @@
       </nav>
     </div>
   </header>
-
   <main class="main_inner">
-
-    <div class="top_visual">
-      <ul class="">
-        <li><img src="images/top/mv01.jpg" alt="" width="" height=""></li>
-      </ul>
-    </div>
+    <section id="top_mv">
+      <h2 class="title_mv">人は語る。<br />袋は語る。</h2>
+      <div class="top_visual">
+        <ul class="">
+          <li><img src="images/top/mv01.jpg" class="sp_hide"><img src="images/top/mv01_sp.jpg" class="pc_hide"></li>
+        </ul>
+      </div>
+    </section>
 
     <section>
-      <div class="home-read contents_l">
-        <p>様々なご要望に柔軟に対応しながら確かな高品質を追求していく<br />
-          トータルサービスシステムの雄進印刷
-        </p>
+      <div class="top_read taC">
+        <p>様々なご要望に柔軟に対応しながら<br class="pc_hide" />
+          確かな高品質を追求していく<br />
+          トータルサービスシステムの雄進印刷 </p>
       </div>
     </section>
 
     <!-- PRODUCT -->
-    <section>
-      <div class="contents_l">
+    <section id="product">
+      <div class="contents_l columns product_wrap">
         <ul class="photo">
-          <li class="fade-up"><img src="">
-          </li>
-          <li class="fade-up2"><img src="">
-          </li>
+          <li class="fade-up-top"><img src="images/top/product01.jpg"> </li>
+          <li class="fade-up-top2"><img src="images/top/product02.jpg"> </li>
         </ul>
         <div class="text">
-          <h3 class="title fadetxt">製品・サービス<span class="title_en">PRODUCT/SERVICE</span></h3>
+          <div class="title_wrap">
+            <h3 class="title fadetxt">製品・サービス</h3>
+            <div class="title_en fadetxt">PRODUCT/SERVICE</div>
+          </div>
           <div class="textarea fade">
             <p>
               ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。
             </p>
-            <p>
-              ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。
-            </p>
+            <p> ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。 </p>
           </div>
-          <div class="btn"><a href=""></a></div>
+          <div class="btnarea fade"><a href="" class="btn btn_b btnarrow btnarrow_b">製品・サービスについて</a></div>
         </div>
       </div>
     </section>
 
     <!-- COMPANY -->
-    <section>
-      <div class="contents_l">
-        <div class="photo">
-          <img class="fade-up" src="">
-        </div>
+    <section id="company">
+      <div class="contents_l columns company_wrap">
         <div class="text">
-          <h3 class="title fadetxt">会社概要<span class="title_en">COMPANY</span></h3>
-          <div class="textarea fade">
-            <p>
-              私たちの役割はお客様と共に価値ある製品をターゲットに提供する事です。<br />
-              他社にない強みを磨くことで、お客様のビジネスを近くで支えるパートナーになる事を目指しています。
-            </p>
+          <div class="title_wrap">
+            <h3 class="title fadetxt">会社概要</h3>
+            <div class="title_en fadetxt">COMPANY</div>
           </div>
-          <div class="btn"><a href=""></a></div>
+          <div class="textarea fade">
+            <p> 私たちの役割はお客様と共に価値ある製品をターゲットに提供する事です。<br />
+              他社にない強みを磨くことで、お客様のビジネスを近くで支えるパートナーになる事を目指しています。 </p>
+          </div>
+          <div class="btnarea fade"><a href="" class="btn btn_b btnarrow btnarrow_b">会社概要ページへ</a></div>
         </div>
+        <div class="photo fade"> <img src="images/top/company.jpg"> </div>
       </div>
     </section>
 
-    <!--  -->
-    <section>
-      <div class="contents_l">
+    <!-- contentslist -->
+    <section id="contentslist">
+      <div class="contents_l contentslist_wrap">
         <div class="">
-          <ul>
-            <li>
+          <ul class="columns contentslist_items">
+            <li class="contentslist_item">
               <div class="">
-                <div class="phto"></div>
-                <div class="link"><a href="">環境への取り組み<span class="title_en">ENVIRONMENT</span></a></div>
+                <div class="photo fade-up-top3"><img src="images/top/environment.jpg"></div>
+                <div class="linkarea fade"><a href="" class="btn btnarrow">環境への取り組み<span
+                      class="title_en">ENVIRONMENT</span></a></div>
               </div>
             </li>
-            <li>
+            <li class="contentslist_item">
               <div class="">
-                <div class="phto"></div>
-                <div class="link"><a href="">採用情報<span class="title_en">RECRUIT</span></a></div>
+                <div class="photo fade-up-top4"><img src="images/top/reqruit.jpg"></div>
+                <div class="linkarea fade"><a href="" class="btn btnarrow">採用情報<span class="title_en">RECRUIT</span></a>
+                </div>
               </div>
             </li>
-            <li>
+            <li class="contentslist_item">
               <div class="">
-                <div class="phto"></div>
-                <div class="link"><a href="">アクセス<span class="title_en">ACCESS</span></a></div>
+                <div class="photo fade-up-top5"><img src="images/top/access.jpg"></div>
+                <div class="linkarea fade">
+                  <a href="" class="btn btnarrow">アクセス<span class="title_en">ACCESS</span></a>
+                </div>
               </div>
             </li>
           </ul>
         </div>
       </div>
     </section>
-
-    <!-- ONLINESHOP -->
-    <section>
-      <div class="contents_l">
-        <div class="">
-          <div class="img"><img src=""></div>
-          <div class="btn"><a href="">オンラインショップ<span class="title_en">ONLINE SHOP</span></a></div>
+    <section id="online">
+      <div class="contents_m columns columns_center_v online_wrap">
+        <div class="online_img">
+          <div class="online_img_wrap"><img src="images/top/onlineshop.jpg"></div>
         </div>
+        <div class="linkarea linkarea_online"><a href="" class="btn btnarrow">オンラインショップ<span
+              class="title_en">ONLINE SHOP</span></a></div>
       </div>
     </section>
 
     <!-- NEWS -->
-    <section>
-      <div class="contents_l">
-        <h3 class="title fadetxt">お知らせ<span class="title_en">NEWS</span></h3>
-        <div class="">
-          <ul class="news-list">
-            <li>
-              <a href="">
-                <div class="news_list_item">
-                  <span class="news_list_date">2021.04.24</span>
-                  <span class="news_list_txt">記事タイトルが表示記事タイトルが表示記事タイトルが表示</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div class="news_list_item">
-                  <span class="news_list_date">2021.04.24</span>
-                  <span
+    <section id="news">
+      <div class="contents_m columns columns_center_v news_wrap">
+        <div class="title_wrap taC">
+          <h3 class="title fadetxt">お知らせ</h3>
+          <div class="title_en fadetxt">NEWS</div>
+        </div>
+        <div class="news_list_wrap">
+          <ul class="news_list">
+            <li class="fade"> <a href="">
+                <div class="news_list_item columns"> <span class="news_list_date">2021.04.24</span> <span
+                    class="news_list_txt">記事タイトルが表示記事タイトルが表示記事タイトルが表示</span> </div>
+              </a> </li>
+            <li class="fade"> <a href="">
+                <div class="news_list_item columns"> <span class="news_list_date">2021.04.24</span> <span
                     class="news_list_txt">記事タイトルが表示記事タイトルが表示記事タイトルが表示記事タイトルが表示記事タイトルが表示記事タイトルが表示記事タイトルが表示記事タイトルが表示記事タイトルが表示</span>
                 </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div class="news_list_item">
-                  <span class="news_list_date">2021.04.24</span>
-                  <span class="news_list_txt">記事タイトルが表示記事タイトルが表示記事タイトルが表示</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div class="news_list_item">
-                  <span class="news_list_date">2021.04.24</span>
-                  <span class="news_list_txt">記事タイトルが表示記事タイトルが表示記事タイトルが表示</span>
-                </div>
-              </a>
-            </li>
+              </a> </li>
+            <li class="fade"> <a href="">
+                <div class="news_list_item columns"> <span class="news_list_date">2021.04.24</span> <span
+                    class="news_list_txt">記事タイトルが表示記事タイトルが表示記事タイトルが表示</span> </div>
+              </a> </li>
+            <li class="fade"> <a href="">
+                <div class="news_list_item columns"> <span class="news_list_date">2021.04.24</span> <span
+                    class="news_list_txt">記事タイトルが表示記事タイトルが表示記事タイトルが表示</span> </div>
+              </a> </li>
           </ul>
         </div>
+        <div class="btnarea fade"><a href="" class="btn_m btn_b btnarrow btnarrow_b">お知らせ一覧</a></div>
       </div>
     </section>
   </main>
   <footer>
     <div class="footer_wrap footer_wrap01">
-      <div class="f_contact_wrap">
-        <div class="f_contact_head">
-          <h3 class="title">お問い合わせ<span class="title_en">CONTACT</span></h3>
+      <div class="f_contact_wrap columns columns_center_v">
+        <div class="title_wrap taC">
+          <h3 class="f_title">お問い合わせ</h3>
+          <div class="f_title_en">CONTACT</div>
         </div>
-        <div class="">
+        <div class="f_contact_text">
           <p class="">弊社に関するご質問・ご意見などある方は、お気軽にお問い合わせください。<br>
             担当者よりご連絡を致します。</p>
-          <div class="f_contact_link">
-            <div class="f-contact_tel">
+          <div class="f_contact_link columns columns_center_v">
+            <div class="f-contact_tel taC">
               <p>お電話でのお問い合わせ</p>
               <div class="f_contact_tellink">03-5225-1910</div>
-              <p>平日10:00～18:00</p>
+              <p class="f_contact_time">平日10:00～18:00</p>
             </div>
             <div class="f-contact_form">
-              <p class=""><a href="" class="f_contact_formlink">お問い合わせフォーム</a></p>
+              <div class="btnarea"><a href="" class="btn_m btnarrow btnarrow_w">お問い合わせフォーム</a></div>
             </div>
           </div>
         </div>
@@ -246,9 +229,8 @@
         </ul>
       </nav>
       <div class="f_logo"><a href="index.html"><img src="images/common/logo.jpg" alt="株式会社 雄進印刷"></a></div>
-      <p class="f_copyright">© 2022 YUSHIN-PRINTING</p>
+      <p class="f_copyright taC">© 2022 YUSHIN-PRINTING</p>
     </div>
   </footer>
 </body>
-
 </html>
